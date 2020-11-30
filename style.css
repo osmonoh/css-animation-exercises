@@ -1,0 +1,198 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgba(0, 0, 0, 0.9);
+  font-family: sans-serif;
+}
+
+/* 
+===========================
+bouncing ball
+===========================
+*/
+
+.container-1 {
+  margin: 50px auto;
+  width: 800px;
+  height: 800px;
+  background-color: pink;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 100px;
+}
+
+.ball {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+
+  background-color: purple;
+  background-image: radial-gradient(
+    circle at top,
+    purple 0,
+    rgb(102, 0, 102),
+    rgb(48, 0, 48) 100%
+  );
+  z-index: 1;
+  animation: bounce 1s infinite ease-in-out;
+}
+
+@keyframes bounce {
+  0% {
+    transform: scale(1) translateY(0);
+  }
+  /* 10% {
+    transform: scale(0.7, 1.3) translateY(150px);
+  } */
+  50% {
+    transform: scale(1.4, 0.6) translateY(840px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.shadow {
+  margin-top: 444px;
+  width: 200px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: rgba(128, 128, 128);
+  z-index: 0;
+  animation: shadow 0.5s infinite alternate ease-in-out;
+}
+@keyframes shadow {
+  0% {
+    transform: scale(1);
+    opacity: 0.4;
+  }
+  100% {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+
+/* 
+===========================
+pulsing point
+===========================
+*/
+
+.container-2 {
+  margin: 50px auto;
+  width: 800px;
+  height: 800px;
+  background-color: lightgreen;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dot {
+  margin: 0 auto;
+  width: 2px;
+  height: 2px;
+  border-radius: 50%;
+  background-color: darkgreen;
+  animation: pulse 1s infinite cubic-bezier(0, 0.25, 1, 0.75);
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  20% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    transform: scale(200);
+    opacity: 0;
+  }
+}
+
+/* 
+===========================
+ringing phone
+===========================
+*/
+
+.container-3 {
+  margin: 50px auto;
+  width: 800px;
+  height: 800px;
+  background-color: pink;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.attention-seeker {
+  border-radius: 60px;
+  background-color: hotpink;
+  display: flex;
+  align-items: center;
+  padding: 20px 40px;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.phone {
+  width: 60px;
+  animation: ring 8s 2s infinite;
+}
+
+@keyframes ring {
+  8% {
+    transform: translateY(0) scale(1);
+  }
+  9% {
+    transform: translateY(-10px) scale(1.2);
+  }
+  10% {
+    transform: translateY(-10px) scale(1.2) rotateZ(-10deg);
+  }
+  10.5% {
+    transform: rotateZ(10deg);
+  }
+  11% {
+    transform: rotateZ(-10deg);
+  }
+  11.5% {
+    transform: rotateZ(0);
+  }
+  15% {
+    transform: rotateZ(-10deg);
+  }
+  15.5% {
+    transform: rotateZ(10deg);
+  }
+  16% {
+    transform: rotateZ(-10deg);
+  }
+  16.5% {
+    transform: rotateZ(0);
+  }
+  20% {
+    transform: rotateZ(-10deg);
+  }
+  20.5% {
+    transform: rotateZ(10deg);
+  }
+  21% {
+    transform: rotateZ(-10deg);
+  }
+  21.5% {
+    transform: rotateZ(0);
+  }
+}
