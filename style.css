@@ -58,8 +58,8 @@ bouncing ball
 }
 
 .shadow {
-  margin-top: 444px;
-  width: 200px;
+  margin-top: 464px;
+  width: 180px;
   height: 30px;
   border-radius: 50%;
   background-color: rgba(128, 128, 128);
@@ -68,12 +68,12 @@ bouncing ball
 }
 @keyframes shadow {
   0% {
-    transform: scale(1);
-    opacity: 0.4;
-  }
-  100% {
     transform: scale(0);
     opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.4;
   }
 }
 
